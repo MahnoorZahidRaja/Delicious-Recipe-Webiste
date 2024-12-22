@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <header>
+        <h1>Review</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe1.html">Spaghetti</a></li>
+                <li><a href="recipe3.html">Chocolate Chip Cookies</a></li>
+                <li><a href="recipe4.html">Brownies</a></li>
+                <li><a href="review.html">Submit Review</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Submit Your Review</h2>
+        <form id="reviewForm">
+            <label for="name">Your Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="review">Your Review:</label><br>
+            <textarea id="review" name="review" rows="5" required></textarea><br><br>
+
+            <button type="submit">Submit Review</button>
+        </form>
+
+        <h2>All Reviews</h2>
+        <div id="reviewList">
+            <!-- User-submitted reviews will appear here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Delicious Recipes by MZR</p>
+    </footer>
+
+    <script src="review.js"></script>
+</body>
+</html>

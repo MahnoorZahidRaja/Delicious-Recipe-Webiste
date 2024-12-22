@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*font-family: Arial, sans-serif;*/
+    font-family: "Goudy Bookletter 1911", system-ui;
+    background-color: #f0f0f0;
+    color: #333;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+
+}
+
+header {
+    background-color: #b42b4d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 30px;
+}
+main ul li {
+    margin-bottom: 20px; /* Add space below each recipe */
+}
+
+.recipe {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recipe h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recipe-content {
+    display: flex;
+    align-items: center;
+}
+
+.recipe-content img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.recipe-details {
+    max-width: 500px;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+ul, ol {
+    margin-left: 20px;
+}
+
+/* Faded Background Section */
+.faded-background {
+    position: relative; /* Allows for layering of content and image */
+    height: 700px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden; /* Ensures the image doesn't spill outside the section */
+}
+
+.faded-background .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the section without distortion */
+    z-index: 0; /* Places the image behind the content */
+    filter: brightness(40%); /* Applies the fading effect to the image */
+}
+
+.faded-background .content {
+    position: relative; /* Keeps content on top of the image */
+    z-index: 1; /* Ensures the content is layered above the image */
+    color: white; /* Makes the text stand out against the faded image */
+}
+
+.faded-background h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.faded-background p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.faded-background button {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.faded-background button:hover {
+    background-color: #d4af37; /* Slightly darker gold for hover effect */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b42b4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b42b4d;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #b42b4d;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.overlay {
+    background: rgba(100, 28, 28, 0.6); /* Black with 50% opacity */
+    color: rgb(12, 12, 12);
+    padding: 3rem;
+    border-radius: 20px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    pointer-events: auto; /* Allow interaction with the form content */
+}
+
+.container {
+    background-color: white;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Style the login form */
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main form label {
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+main form input, main form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+main form input::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+main form button {
+    background-color: #b42b4d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+main form button:hover {
+    background-color: #161113;
+}
+
+/* Style the response message */
+#loginResponse {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+}
